@@ -1,0 +1,619 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!-- Page Title Here -->
+  <title>Chrysalis - Grasshopper</title>
+
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <meta name="description" content="Chrysalis is a 3D model built using Grasshopper and Rhino">
+
+  <!-- Disable screen scaling-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <!-- Facebook Meta -->
+  <meta property="og:url" content="your website url here">
+  <meta property="og:title" content="Chrysalis, a grasshopper model">
+  <meta property="og:description" content="Description of the page">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://e-lefebvre.github.io/grasshopper-chrysalis/img/bg-default.png">
+  <meta property="og:image:secure_url" content="https://e-lefebvre.github.io/grasshopper-chrysalis/img/bg-default.png">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Web fonts and Web Icons -->
+  <link rel="stylesheet" href="fonts/opensans/stylesheet.css">
+  <link rel="stylesheet" href="fonts/montserrat/stylesheet.css">
+  <link rel="stylesheet" href="fonts/playfair/stylesheet.css">
+  <link rel="stylesheet" href="fonts/bebas/stylesheet.css">
+  <link rel="stylesheet" href="fonts/ostrich/stylesheet.css">
+  <link rel="stylesheet" href="fonts/ionicons.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <!-- Vendor CSS style -->
+  <link rel="stylesheet" href="css/pageloader.css">
+
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="js/vegas/vegas.min.css">
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="css/style-color2.css">
+
+  <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+
+<body id="menu" class="body-page">
+  <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- Page Loader : just comment these lines to remove it -->
+  <div class="page-loader" id="page-loader">
+    <div>
+      <div class="icon ion-spin"></div>
+      <p>loading</p>
+    </div>
+  </div>
+
+  <!-- BEGIN OF site header Menu -->
+  <header class="page-header navbar page-header-alpha scrolled-white">
+
+    <!-- Begin of logo/brand -->
+    <a class="navbar-brand" href="index.html#">
+      <span class="logo">
+        <img class="light-logo" src="img/logo.png" alt="Logo">
+      </span>
+    </a>
+    <!-- End of logo/brand -->
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of top menu -->
+      <nav class="navbar-topmenu">
+        <ul class="navbar-social d-none d-lg-block">
+          
+        </ul>
+        <!-- Begin of CTA Actions, & Icons menu (optional) -->
+        <ul class="navbar-nav navbar-nav-actions">
+          <li class="nav-item">
+            <a class="btn btn-outline btn-round" target="_blank" href="https://github.com/e-lefebvre/grasshopper-chrysalis/raw/master/Chrysalis.gh">
+              <span class="text" style="margin-right: 18px">Download</span>
+              <span class="icon big">
+                <span class="fal fa-download"></span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/e-lefebvre/grasshopper-chrysalis/" target="_blank" class="btn-social">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- End of CTA & Icons menu -->
+      </nav>
+      <!-- End of top menu -->
+
+      
+
+      <!-- Begin of sidebar nav menu params class: text-only / icon-only-->
+      <nav class="navbar-sidebar font-primary">
+        <ul class="navbar-nav" id="qmenu">
+          <li class="nav-item" data-menuanchor="home">
+            <a href="#home">
+              <span class="icon">A</span>
+              <span class="txt">Accueil</span>
+            </a>
+          </li>
+          <li class="nav-item" data-menuanchor="about">
+            <a href="#about">
+              <span class="icon">M</span>
+              <span class="txt">Modèle</span>
+            </a>
+          </li>
+          <li class="nav-item" data-menuanchor="projects">
+            <a href="#projects">
+              <span class="icon">É</span>
+              <span class="txt">Étapes</span>
+            </a>
+          </li>
+          <li class="nav-item" data-menuanchor="contact">
+            <a href="#contact">
+              <span class="icon">P</span>
+              <span class="txt">Paramétrique</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End of sidebar nav menu -->
+    </div>
+    <!-- end of menu wrapper -->
+
+  </header>
+  <!-- END OF site header Menu-->
+
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover" id="parallax-cover">
+    <!-- Cover Background -->
+    <div data-depth="0.2" class="cover-bg bg-img" data-image-src="img/bg-default.png"></div>
+
+    <!-- Transluscent mask as filter -->
+    <div class="cover-bg-mask bg-color" data-bgcolor="rgba(0,0,0,0.2)"></div>
+
+
+  </div>
+  <!--END OF page cover -->
+
+
+  <!-- BEGIN OF page main content -->
+  <main class="page-main page-fullpage main-anim" id="mainpage">
+
+    <!-- Begin of home section -->
+    <div class="section section-home fullscreen-md fp-auto-height-responsive main-home border-sm section-centered"
+    data-section="home">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin v-center">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12 col-lg-8 text-left">
+              <!-- title -->
+              <div class="title-desc">
+                <h1 class="display-4 display-title display-decor home-title text-slide-in anim-1-off">Chrysalis</h1>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6 text-left">
+              <!-- description -->
+              <div class="title-desc">
+                <p class="anim-4">Modélisation 3D d'un pavillon à l'aide du logiciel <a href="#" style="color: #def2f1">Grasshopper</a></p>
+              </div>
+
+              <!-- Action button -->
+              <div class="btns-action anim-5">
+                <a class="btn btn-arrow btn-primary" href="#about">
+                  <span class="icon">
+                    <span class="arrow-right"></span>
+                  </span>
+                  <span class="text">Modèle 3D</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Arrows scroll down/up -->
+        <footer class="section-footer scrolldown">
+          <!--<a class="up">
+				<span class="btn btn-arrow">
+					<span class="icon">
+						<span class="arrow-up"></span>
+					</span>
+				</span>
+			</a>-->
+          <a class="down">
+            <span class="btn btn-arrow">
+              <span class="icon">
+                <span class="arrow-down"></span>
+              </span>
+            </span>
+          </a>
+        </footer>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of home section -->
+
+    <!-- Begin of description section -->
+    <div class="section section-description fp-auto-height-responsive " data-section="about">
+      
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth fullheight with-margin center-lg-v padding-wrapper-topbottom">
+
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row  justify-content-between">
+            <div class="col-12 col-lg-7">
+              <div class="sketchfab-embed-wrapper" style="height: 100%">
+                <iframe width="100%" height="100%" src="https://sketchfab.com/models/81136fbe83104ee9b178bc552ce81d11/embed?autostart=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4 text-left center-v">
+              <div class="wrapper">
+                <!-- title and description -->
+                <div class="title-desc">
+                  <h2 class="display-4 display-title display-decor anim-1">Modèle Sketchfab</h2>
+                  <p class="anim-2 desc-decor">
+                    Sketchfab nous a permis d'exporter notre modèle depuis le logiciel Rhinocéros.
+                    Le pavillon choisi nous a amené à exploiter diférents outils de Grasshopper afin de le rendre paramétrique.
+                  </p>
+                </div>
+
+                <!-- Action button -->
+                <div class="btns-action anim-3">
+                  <a href="https://sketchfab.com/models/81136fbe83104ee9b178bc552ce81d11?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" class="btn btn-social">
+                    <i class="icon fal fa-cube"></i>
+                  </a>
+
+                  <a class="btn btn-outline btn-primary" href="#projects">
+                    <span class="text">Étapes</span>
+                    <span class="icon">
+                      <span class="arrow-right"></span>
+                    </span>
+                  </a>
+
+                  <a class="btn btn-outline btn-primary" href="./img/pinterest.jpg" target="_blank">
+                    <span class="text">Inspiration</span>
+                    <span class="icon">
+                      <i class="icon fab fa-pinterest"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Arrows scroll down/up -->
+        <footer class="section-footer scrolldown">
+          <a class="up">
+            <span class="btn btn-arrow">
+              <span class="icon">
+                <span class="arrow-up"></span>
+              </span>
+            </span>
+          </a>
+          <a class="down">
+            <span class="btn btn-arrow">
+              <span class="icon">
+                <span class="arrow-down"></span>
+              </span>
+            </span>
+          </a>
+        </footer>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+
+
+    <!-- Begin of projects / gallery slider section -->
+    <div class="section section-twoside gallery-slider " data-section="projects">
+
+      <div class="slide">
+        <div class="slide-wrapper">
+          <div class="item-wrapper">
+            <div class="section-cover-tier right fit bg-img" data-image-src="./img/gif/steps.gif"></div>
+            <div class="legend section-content">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="title-desc">
+                    <h3 class="display-decor display-title">Étapes</h3>
+                    <p class="desc-decor">
+                      Voici les différentes étapes de construction du pavillon
+                    </p>
+                  </div>
+                  <!-- Action button -->
+                  <div class="btns-action anim-5">
+                    <a class="btn btn-arrow btn-primary" href="#projects/1">
+                      <span class="icon">
+                        <span class="arrow-right"></span>
+                      </span>
+                      <span class="text">Faire défiler</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-wrapper">
+          <div class="item-wrapper">            
+            <div class="legend section-content">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="title-desc">
+                    <h3 class="display-decor display-title">Création des extrémités</h3>
+                    <p class="desc-decor">
+                      Un point est placé en (0, 0, 0) et un autre en (x, 0, 0) 
+                      avec x une coordonnée variable afin de pouvoir choisir la 
+                      portée de l’arc.
+                    </p> 
+                    
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <img src="img/steps/01_Extremites.png" width="100%" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-wrapper">
+          <div class="item-wrapper">
+            <div class="legend section-content">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="title-desc">
+                    <h3 class="display-decor display-title">Création chaînettes</h3>
+                    <p class="desc-decor">
+                        On crée une chaînette en précisant les extrémités, 
+                        la longueur et le sens de gravité. Ces deux derniers 
+                        paramètres sont variables pour permettre la modification 
+                        de la flèche de l’arc et son inclinaison par rapport au 
+                        vecteur x. On crée les autres chaînettes avec le même 
+                        processus et on borne le paramètre du sens de gravité 
+                        pour que les arcs ne se chevauchent et ne s’inversent pas.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <a href="./img/steps/02_Chainettes.png" target="_blank">
+                    <img src="./img/steps/02_Chainettes.png" width="100%" />
+                  </a>
+                  <div style="background-color: rgb(250, 253, 253);background: rgba(250, 253, 253, 1)">
+                      <img src="./img/croquis/0.png" style="display: block;margin-left: auto;margin-right: auto;margin-top: auto;width: 30%;opacity: 0.6;"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+          <div class="slide-wrapper">
+            <div class="item-wrapper">
+              <div class="legend section-content">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <div class="title-desc">
+                      <h3 class="display-decor display-title">Division des arcs</h3>
+                      <p class="desc-decor">
+                          Pour lier les arcs entre eux par des fils on commence 
+                          par diviser les arcs afin d’obtenir n points le long 
+                          de la courbe. 
+                      </p>
+                    </div>
+                    <img src="./img/croquis/2.png" style="display: block;margin-left: 0;margin-right: auto;margin-top: 1em;width: 30%;opacity: 0.6;"/>
+                  </div>
+                  <div class="col-12 col-lg-6" style="background-color: white">
+                    <a href="./img/steps/03_Divisions.png" target="_blank">
+                      <img src="./img/steps/03_Divisions.png" width="100%"/>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+          <div class="slide-wrapper">
+            <div class="item-wrapper">
+              <div class="legend section-content">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <div class="title-desc">
+                      <h3 class="display-decor display-title">Création des liens</h3>
+                      <p class="desc-decor">
+                          Les 4  listes de points obtenues sont ensuite décalées 
+                          de façon croissante d’un arc à l’autre pour que les 
+                          liens tracés  soient diagonaux. Puis des arcs sont 
+                          dessinés entre les chaînettes 1 et 2, 2 et 3 et 3 et 4 
+                          à partir des listes de points. Le vecteur appliqué à 
+                          l’outil arc permet de régler la courbure des liens.<br/>
+                          On fait ensuite les liens dans l’autre diagonale de 
+                          la même façon. Ce coup ci les listes de points sont 
+                          décalées de façon décroissante et l’ordre des listes est inversé.
+                      </p>
+                      <img src="./img/croquis/3.png" style="display: block;margin-left: 0;margin-right: auto;margin-top: 1em;width: 30%;opacity: 0.6;"/>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6" style="background-color: white">
+                    <a href="./img/steps/04_Liens.png" target="_blank">
+                      <img src="./img/steps/04_Liens.png" width="100%" />
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+          <div class="slide-wrapper">
+            <div class="item-wrapper">
+              <div class="legend section-content">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <div class="title-desc">
+                      <h3 class="display-decor display-title">Ajout des épaisseurs</h3>
+                      <p class="desc-decor">
+                          On applique l’outil cylindre sur l’ensemble des arcs 
+                          pour paramétrer l’épaisseur des chaînettes et des liens.
+                      </p>
+                    </div>
+                    <img src="./img/croquis/4.png" style="display: block;margin-left: 0;margin-right: auto;margin-top: 1em;width: 60%;opacity: 0.7;"/>
+                  </div>
+                  <div class="col-12 col-lg-6" style="background-color: white">
+                    <a href="./img/steps/05_Pipe.png" target="_blank">
+                      <img src="./img/steps/05_Pipe.png" width="100%" />
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Navigation -->
+      <div class="section-slider-footer slider-navigation">
+        <a class="left">
+          <span class="btn btn-arrow">
+            <span class="icon">
+              <span class="arrow-left"></span>
+            </span>
+          </span>
+        </a>
+        <a class="right">
+          <span class="btn btn-arrow">
+            <span class="icon">
+              <span class="arrow-right"></span>
+            </span>
+          </span>
+        </a>
+        <div class="text">
+          <p>Suite</p>
+        </div>
+      </div>
+
+      <!-- Arrows scroll down/up -->
+      <footer class="section-footer scrolldown">
+        <a class="down">
+          <span class="btn btn-arrow">
+            <span class="icon">
+              <span class="arrow-down"></span>
+            </span>
+          </span>
+        </a>
+      </footer>
+
+    </div>
+    <!-- End of projects / gallery slider section -->
+
+   
+
+    <!-- Begin of contact section -->
+    <div class="section section-contact fp-auto-height-responsive no-slide-arrows " data-section="contact">
+      
+      <!-- begin of information slide -->
+      <div class="slide" id="information" data-anchor="information">
+        <!-- Begin of slide section wrapper -->
+        <div class="section-wrapper fullwidth fullheight center-lg-v with-margin padding-wrapper-topbottom">
+          <!-- content -->
+          <div class="section-content fullwidth anim text-left">
+            <!-- main content -->
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-8 col-lg-6 text-left center-v" style="padding-left: 5em">
+                <div class="f-wrapper">
+                  <!-- title and description -->
+                  <div class="title-desc">
+                    <div class="anim-2">
+                      <h2 class="display-4 display-title display-decor">Paramétrique</h2>
+                      <p class="desc-decor">Certaines caractéristiques du pavillon 
+                        sont modifiables à partir de sliders, comme par exemple 
+                        la portée des arcs en modifiant l'écartement des points, 
+                        ou encore le nombre de liens qui joignent les chainettes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-none d-md-block col-12 col-md-4 col-lg-4">
+                <img width="100%" src="./img/gif/range.gif"/>
+                <img width="100%" src="./img/gif/links.gif"/>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End of slide section wrapper -->
+
+        <!-- begin of slide footer -->
+        <div class="slide-footer section-footer footer-register">
+          <div class="form-desc">
+            <span class="text">
+              Un projet de É. Lefebvre & C. Ciprelli encadré par 
+              <a href="http://www.lyon.archi.fr/fr//fr/kevin-jacquot" target="_blank">
+                K. Jacquot
+              </a>
+            </span>
+          </div>          
+        </div>
+        <!-- end of slide footer -->
+      </div>
+
+
+
+      <!-- Arrows scroll down/up -->
+      <footer class="section-footer scrolldown">
+        <a class="up">
+          <span class="btn btn-arrow">
+            <span class="icon">
+              <span class="arrow-up"></span>
+            </span>
+          </span>
+        </a>
+      </footer>
+    </div>
+    <!-- End of contact section -->
+  </main>
+  <!-- END OF page main content -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/slick/slick.min.js"></script>
+
+  <!-- All vendor scripts -->
+  <script src="js/vendor/parallax.min.js"></script>
+  <script src="js/vendor/scrolloverflow.min.js"></script>
+  <script src="js/vendor/all.js"></script>
+  <script src="js/particlejs/particles.min.js"></script>
+
+  <!-- Form script -->
+  <script src="js/form_script.js"></script>
+
+  <!-- Javascript main files -->
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
